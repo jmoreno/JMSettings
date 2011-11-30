@@ -14,6 +14,9 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property (retain, strong) NSMutableArray *arrayButtons;
+
 - (IBAction)showInfo:(id)sender;
+- (IBAction)openURL:(id)sender;
 
 @end

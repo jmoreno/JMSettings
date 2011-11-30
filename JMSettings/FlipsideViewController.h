@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsViewController.h"
 
 @class FlipsideViewController;
 
@@ -14,9 +15,11 @@
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
 @end
 
-@interface FlipsideViewController : UIViewController
+@interface FlipsideViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SettingsViewControllerDelegate>
 
 @property (assign, nonatomic) IBOutlet id <FlipsideViewControllerDelegate> delegate;
+@property (nonatomic, strong) NSMutableArray *arrayButtons;
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)done:(id)sender;
 
